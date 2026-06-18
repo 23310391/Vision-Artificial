@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import os
 
 # ─── CONFIGURACIÓN ───────────────────────────────────────────
-DATASET_YAML = "mi_dataset/data.yaml"  # ← cambia "mi_dataset" por el nombre real de tu carpeta
+DATASET_YAML = "dataset/data.yaml"  
 MODELO_BASE  = "yolov8n.pt"            # nano: el más rápido para Codespaces sin GPU
 EPOCHS       = 50
 BATCH        = 8                       # baja a 4 si te da error de memoria

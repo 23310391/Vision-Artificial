@@ -1,13 +1,7 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+path: /workspaces/Vision-Artificial/dataset
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 1
 names: ['Casco de seguridad']
-
-roboflow:
-  workspace: estefhanys-workspace
-  project: casco-de-seguridad
-  version: dataset
-  license: CC BY 4.0
-  url: https://universe.roboflow.com/estefhanys-workspace/casco-de-seguridad/dataset/dataset
