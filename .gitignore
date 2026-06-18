@@ -1,0 +1,16 @@
+# Modelos YOLOv8
+*.pt
+*.onnx
+
+# Resultados de entrenamiento
+runs/
+
+# Entorno virtual
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
