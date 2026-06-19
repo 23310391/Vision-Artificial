@@ -1,3 +1,9 @@
+'''
+Con este script entrenamos nuestro modelo con el dataset previamente etiquetado
+El etiquetado de las imagenes se realizó en la pagina RoboFlos, se realizó un etiquetado manual.
+Exportamos los archivos .yaml y los guaradmos en la carpeta dataset.
+'''
+
 from ultralytics import YOLO
 import os
 

@@ -1,3 +1,9 @@
+'''
+Basandonos en el archiov best.pt generado durante el entrenamiento, 
+analizamos las nuevas imagenes, pasandolas por las 130 capas del best.pt
+se descartan las coincidencias menores a 0.5 (el umbral se puede modificar para que sea mas o menos estricto)
+'''
+
 from ultralytics import YOLO
 
 # ─── CONFIGURACIÓN ───────────────────────────────────────
