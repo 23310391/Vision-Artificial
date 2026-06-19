@@ -15,11 +15,14 @@ Santiago Lomas Pérez - 23310391
 ### Pasos
 1. Clonar el repositorio:
 >git clone https://github.com/usuario/Vision-Artificial.git
+
 >cd Vision-Artificial
 
 2. Crear y activar el entorno virtual:
 >python -m venv .venv
+
 >source .venv/bin/activate        # Linux/Mac
+
 >.venv\Scripts\activate           # Windows
 
 3. Instalar las dependencias:
