@@ -1,6 +1,39 @@
 # Vision-Artificial
 # Sistema Inteligente de Detección Automática del Uso de Cascos de Seguridad mediante Visión Artificial y YOLOv8
 
+## Integrantes
+Estefhany Betzabe Covarrubias Sánchez - 23310387
+Santiago Lomas Pérez - 23310391
+
+## Instrucciones de ejecución
+### Requisitos previos
+- Python 3.12
+- Git
+- Entorno virtual (recomendado)
+
+### Pasos
+1. Clonar el repositorio:
+>git clone https://github.com/usuario/Vision-Artificial.git
+>cd Vision-Artificial
+
+2. Crear y activar el entorno virtual:
+>python -m venv .venv
+>source .venv/bin/activate        # Linux/Mac
+>.venv\Scripts\activate           # Windows
+
+3. Instalar las dependencias:
+>pip install -r requirements.txt
+
+4. Entrenar el modelo con el dataset incluido:
+>python train.py
+
+5. Guarda las imagenes que quieras analizar en la carpeta `Imagenes_Prueba/`.
+
+6. Ejecutar la inferencia sobre imágenes nuevas:
+>python inferencia.py
+
+Las imágenes con las detecciones generadas se guardarán en `runs/detect/predict/`.
+
 ## Planteamiento del Problema
 En los sectores de construcción, manufactura, minería e industrias de alto riesgo, el uso adecuado del equipo de protección personal (EPP) es fundamental para garantizar la seguridad de los trabajadores. Entre estos elementos, el casco de seguridad constituye una de las principales medidas de protección contra impactos, caídas de objetos y accidentes laborales.
 
@@ -25,3 +58,31 @@ Desarrollar un sistema inteligente basado en visión artificial y el modelo YOLO
 4.	Evaluar la precisión del modelo mediante métricas de detección. 
 5.	Implementar la detección en imágenes, videos o cámara en tiempo real. 
 
+### Descripción del Flujo
+
+1. **Captura:** Las cámaras IP ubicadas en los accesos a zonas de riesgo capturan
+video en tiempo real a 30 fps.
+
+2. **Procesamiento:** Cada frame es procesado por el modelo YOLOv8 entrenado,
+ejecutándose en la unidad de cómputo local (Jetson Nano), lo que garantiza baja
+latencia sin depender de conexión a internet.
+
+3. **Detección positiva (casco detectado):** El sistema registra el evento en una
+bitácora digital con marca de tiempo, el torniquete permite el acceso y el monitor
+de seguridad muestra el frame con el bounding box verde.
+
+4. **Detección negativa (sin casco):** El sistema activa una alarma sonora y visual,
+bloquea el torniquete e impide el acceso a la zona de riesgo. Simultáneamente,
+envía una notificación al supervisor de seguridad vía mensaje o correo electrónico.
+
+5. **Registro y reportes:** Todos los eventos (accesos permitidos y denegados) quedan
+almacenados en una base de datos local, permitiendo generar reportes periódicos de
+cumplimiento de normas de seguridad para auditorías internas.
+
+### Beneficios del Sistema
+- Supervisión continua 24/7 sin depender de personal humano.
+- Reducción de accidentes por incumplimiento de EPP.
+- Generación automática de registros y reportes de seguridad.
+- Escalable a otras zonas de la planta agregando más cámaras.
+- Posibilidad de ampliar el modelo para detectar otros elementos de EPP
+(chalecos, guantes, lentes de seguridad).
