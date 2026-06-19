@@ -26,7 +26,7 @@ else:
         imgsz=IMG_SIZE,
         batch=BATCH,
         patience=10,
-        name="mi_modelo_v1",
+        name="mi_modelo_v2",
         device="cpu",
         workers=2,
     )
