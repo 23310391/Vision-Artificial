@@ -3,6 +3,7 @@
 
 ## Integrantes
 Estefhany Betzabe Covarrubias Sánchez - 23310387
+
 Santiago Lomas Pérez - 23310391
 
 ## Instrucciones de ejecución
