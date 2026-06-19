@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
 # ─── CONFIGURACIÓN ───────────────────────────────────────
-MODELO = "runs/detect/mi_modelo_v1/weights/best.pt"
+MODELO = "runs/detect/mi_modelo_v2/weights/best.pt"
 FUENTE  = "Imagenes_Prueba"   # carpeta, imagen o video
 CONFIANZA = 0.5                  # umbral de detección (0-1)
 # ─────────────────────────────────────────────────────────
